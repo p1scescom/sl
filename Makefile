@@ -6,9 +6,11 @@
 #	Last Modified: 2013/ 5/ 5
 #==========================================
 
+#(2014/03/26 modified Taichi-Sugiyama)
+
 CC=gcc
 CFLAGS=-O
 
-sl: sl.c sl.h
-	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+erutaso: sl.c sl.h
+	$(CC) $(CFLAGS) -o erutaso sl.c -lncurses
 

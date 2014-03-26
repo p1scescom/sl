@@ -5,149 +5,58 @@
  *		  (mtoyoda@acm.org)
  *	Last Modified: 2013/ 5/ 5
  *========================================
+ * 
+ * Erutasonized by Taichi Sugiyama: 2013/ 3/26
+ *
  */
+#define ERUTASOHIGHT     9
+#define ERUTASOFUNNEL  	 4
+#define ERUTASOLENGTH   36
+#define ERUTASOPATTERNS	 6
 
-#define D51HIGHT	10
-#define D51FUNNEL	 7
-#define D51LENGTH	83
-#define D51PATTERNS	 6
+#define ERUTASO11  "      _______                       "
+#define ERUTASO12  "    /:::::::::\\    _____            "
+#define ERUTASO13  "( \\/::::::::::::\\/     _)           "
+#define ERUTASO14  " (|::_A__A_:::::|    _)             "
+#define ERUTASO15  "  |:| O   O |:::|  _)               "
+#define ERUTASO16  "  l:( \" _ \" |:|:|_)                 "
+#define ERUTASO17  "   l C --C  l:|:|                   "
+#define ERUTASO18  "    l:/\\     l:/ )                  "
+#define ERUTASO19  "        `~U^^^U~/                   "
+#define ERUTASO1DEL "                                    "
 
 
-#define D51STR1  "      ====        ________                ___________ "
-#define D51STR2  "  _D _|  |_______/        \\__I_I_____===__|_________| "
-#define D51STR3  "   |(_)---  |   H\\________/ |   |        =|___ ___|   "
-#define D51STR4  "   /     |  |   H  |  |     |   |         ||_| |_||   "
-#define D51STR5  "  |      |  |   H  |__--------------------| [___] |   "
-#define D51STR6  "  | ________|___H__/__|_____/[][]~\\_______|       |   "
-#define D51STR7  "  |/ |   |-----------I_____I [][] []  D   |=======|__ "
+#define ERUTASO21  "      _______                       "
+#define ERUTASO22  "    /:::::::::\\    ___              "
+#define ERUTASO23  " (\\/::::::::::::\\/   _)             "
+#define ERUTASO24  "  |::_A__A_:::::|   _)              "
+#define ERUTASO25  "  |:| O   O |:::| _)                "
+#define ERUTASO26  "  l:( \" _ \" |:|:|)                  "
+#define ERUTASO27  "   l C --C  l:|:|                   "
+#define ERUTASO28  "    l:/\\     l:/ )                  "
+#define ERUTASO29  "        `~U^^^U~/                   "
+#define ERUTASO2DEL "                                    "
 
-#define D51WHL11 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL12 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL13 "  \\_/      \\O=====O=====O=====O_/      \\_/            "
-
-#define D51WHL21 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL22 " |/-=|___|=O=====O=====O=====O   |_____/~\\___/        "
-#define D51WHL23 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
-
-#define D51WHL31 "__/ =| o |=-O=====O=====O=====O \\ ____Y___________|__ "
-#define D51WHL32 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL33 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
-
-#define D51WHL41 "__/ =| o |=-~O=====O=====O=====O\\ ____Y___________|__ "
-#define D51WHL42 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL43 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
-
-#define D51WHL51 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL52 " |/-=|___|=   O=====O=====O=====O|_____/~\\___/        "
-#define D51WHL53 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
-
-#define D51WHL61 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL62 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL63 "  \\_/      \\_O=====O=====O=====O/      \\_/            "
-
-#define D51DEL   "                                                      "
-
-#define COAL01 "                              "
-#define COAL02 "                              "
-#define COAL03 "    _________________         "
-#define COAL04 "   _|                \\_____A  "
-#define COAL05 " =|                        |  "
-#define COAL06 " -|                        |  "
-#define COAL07 "__|________________________|_ "
-#define COAL08 "|__________________________|_ "
-#define COAL09 "   |_D__D__D_|  |_D__D__D_|   "
-#define COAL10 "    \\_/   \\_/    \\_/   \\_/    "
-
-#define COALDEL "                              "
-
-#define LOGOHIGHT    	 6
-#define LOGOFUNNEL  	 4
-#define LOGOLENGTH      84
-#define LOGOPATTERNS	 6
-
-#define LOGO1  "     ++      +------ "
-#define LOGO2  "     ||      |+-+ |  "
-#define LOGO3  "   /---------|| | |  "
-#define LOGO4  "  + ========  +-+ |  "
-
-#define LWHL11 " _|--O========O~\\-+  "
-#define LWHL12 "//// \\_/      \\_/    "
-
-#define LWHL21 " _|--/O========O\\-+  "
-#define LWHL22 "//// \\_/      \\_/    "
-
-#define LWHL31 " _|--/~O========O-+  "
-#define LWHL32 "//// \\_/      \\_/    "
-
-#define LWHL41 " _|--/~\\------/~\\-+  "
-#define LWHL42 "//// \\_O========O    "
-
-#define LWHL51 " _|--/~\\------/~\\-+  "
-#define LWHL52 "//// \\O========O/    "
-
-#define LWHL61 " _|--/~\\------/~\\-+  "
-#define LWHL62 "//// O========O_/    "
-
-#define LCOAL1 "____                 "
-#define LCOAL2 "|   \\@@@@@@@@@@@     "
-#define LCOAL3 "|    \\@@@@@@@@@@@@@_ "
-#define LCOAL4 "|                  | "
-#define LCOAL5 "|__________________| "
-#define LCOAL6 "   (O)       (O)     "
-
-#define LCAR1  "____________________ "
-#define LCAR2  "|  ___ ___ ___ ___ | "
-#define LCAR3  "|  |_| |_| |_| |_| | "
-#define LCAR4  "|__________________| "
-#define LCAR5  "|__________________| "
-#define LCAR6  "   (O)        (O)    "
-
-#define DELLN  "                     "
-
-#define C51HIGHT 11
-#define C51FUNNEL 7
-#define C51LENGTH 87
-#define C51PATTERNS 6
-
-#define C51DEL "                                                       "
-
-#define C51STR1 "        ___                                            "
-#define C51STR2 "       _|_|_  _     __       __             ___________"
-#define C51STR3 "    D__/   \\_(_)___|  |__H__|  |_____I_Ii_()|_________|"
-#define C51STR4 "     | `---'   |:: `--'  H  `--'         |  |___ ___|  "
-#define C51STR5 "    +|~~~~~~~~++::~~~~~~~H~~+=====+~~~~~~|~~||_| |_||  "
-#define C51STR6 "    ||        | ::       H  +=====+      |  |::  ...|  "
-#define C51STR7 "|    | _______|_::-----------------[][]-----|       |  "
-
-#define C51WH61 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH62 "------'|oOo|==[]=-     ||      ||      |  ||=======_|__"
-#define C51WH63 "/~\\____|___|/~\\_|   O=======O=======O  |__|+-/~\\_|     "
-#define C51WH64 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
-
-#define C51WH51 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH52 "------'|oOo|===[]=-    ||      ||      |  ||=======_|__"
-#define C51WH53 "/~\\____|___|/~\\_|    O=======O=======O |__|+-/~\\_|     "
-#define C51WH54 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
-
-#define C51WH41 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH42 "------'|oOo|===[]=- O=======O=======O  |  ||=======_|__"
-#define C51WH43 "/~\\____|___|/~\\_|      ||      ||      |__|+-/~\\_|     "
-#define C51WH44 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
-
-#define C51WH31 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH32 "------'|oOo|==[]=- O=======O=======O   |  ||=======_|__"
-#define C51WH33 "/~\\____|___|/~\\_|      ||      ||      |__|+-/~\\_|     "
-#define C51WH34 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
-
-#define C51WH21 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH22 "------'|oOo|=[]=- O=======O=======O    |  ||=======_|__"
-#define C51WH23 "/~\\____|___|/~\\_|      ||      ||      |__|+-/~\\_|     "
-#define C51WH24 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
-
-#define C51WH11 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH12 "------'|oOo|=[]=-      ||      ||      |  ||=======_|__"
-#define C51WH13 "/~\\____|___|/~\\_|  O=======O=======O   |__|+-/~\\_|     "
-#define C51WH14 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+#define ERUTASO31  "      _______                       "
+#define ERUTASO32  "    /:::::::::\\    __               "
+#define ERUTASO33  "  (/::::::::::::\\/  _)              "
+#define ERUTASO34  "  |::_A__A_:::::| _)                "
+#define ERUTASO35  "  |:| O   O |:::|_)                 "
+#define ERUTASO36  "  l:( \" _ \" |:|:|)                  "
+#define ERUTASO37  "   l C --C  l:|:|                   "
+#define ERUTASO38  "    l:/\\     l:/ )                  "
+#define ERUTASO39  "        `~U^^^U~/                   "
+#define ERUTASO3DEL "                                    "
 
 
 
+#define ERUTASO41  "      _______                       "
+#define ERUTASO42  "    /:::::::::\\    _                "
+#define ERUTASO43  "  |/::::::::::::\\/ _)               "
+#define ERUTASO44  "  |::_A__A_:::::| _)                "
+#define ERUTASO45  "  |:| O   O |:::|_)                 "
+#define ERUTASO46  "  l:( \" _ \" |:|:|)                  "
+#define ERUTASO47  "   l C --C  l:|:|                   "
+#define ERUTASO48  "    l:/\\     l:/ )                  "
+#define ERUTASO49  "        `~U^^^U~/                   "
+#define ERUTASO4DEL "                                    "
