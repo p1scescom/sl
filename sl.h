@@ -12,139 +12,203 @@
 #define D51LENGTH	83
 #define D51PATTERNS	 6
 
+#define MESSAGE          "< OMATASESHIMASHITA."
+#define MESSAGEACCIDENT1 "< A!                "
+#define MESSAGEACCIDENT2 "< ...               "
+#define MESSAGEDEL       "                    "
 
-#define D51STR1  "      ====        ________                ___________ "
-#define D51STR2  "  _D _|  |_______/        \\__I_I_____===__|_________| "
-#define D51STR3  "   |(_)---  |   H\\________/ |   |        =|___ ___|   "
-#define D51STR4  "   /     |  |   H  |  |     |   |         ||_| |_||   "
-#define D51STR5  "  |      |  |   H  |__--------------------| [___] |   "
-#define D51STR6  "  | ________|___H__/__|_____/[][]~\\_______|       |   "
-#define D51STR7  "  |/ |   |-----------I_____I [][] []  D   |=======|__ "
+#define SPANGRIND 80
+#define SPANHEAT 48
+#define SPANEXTRACT 48
+#define SPANSTIR 80
+#define SPANPOUR 80
+#define SPANFINISHED 32
+#define SPANACCIDENT1 32
+#define SPANACCIDENT2 32
 
-#define D51WHL11 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL12 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL13 "  \\_/      \\O=====O=====O=====O_/      \\_/            "
+#define STARTGRIND 0
+#define STARTHEAT (STARTGRIND + SPANGRIND)
+#define STARTEXTRACT (STARTHEAT + SPANHEAT)
+#define STARTSTIR (STARTEXTRACT + SPANEXTRACT)
+#define STARTPOUR (STARTSTIR + SPANSTIR)
+#define STARTFINISHED (STARTPOUR + SPANPOUR)
+#define STARTACCIDENT1 (STARTFINISHED + SPANFINISHED)
+#define STARTACCIDENT2 (STARTACCIDENT1 + SPANACCIDENT1)
 
-#define D51WHL21 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL22 " |/-=|___|=O=====O=====O=====O   |_____/~\\___/        "
-#define D51WHL23 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
+#define TIPPYPATTERNS 5
+#define TIPPYHEIGHT 5
+#define TIPPYLENGTH 12
 
-#define D51WHL31 "__/ =| o |=-O=====O=====O=====O \\ ____Y___________|__ "
-#define D51WHL32 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL33 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
+#define TIPPYLEFT01A     "            "
+#define TIPPYLEFT02A     "   A___A_   "
+#define TIPPYLEFT03A     "  / . .  \\  "
+#define TIPPYLEFT04A     " | \" ~ \"  | "
+#define TIPPYLEFT05A     " ?\\______/? "
 
-#define D51WHL41 "__/ =| o |=-~O=====O=====O=====O\\ ____Y___________|__ "
-#define D51WHL42 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL43 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
+#define TIPPYLEFT01B     "   A___A_   "
+#define TIPPYLEFT02B     "  / . .  \\  "
+#define TIPPYLEFT03B     " | \" ~ \" |  "
+#define TIPPYLEFT04B     " |       |  "
+#define TIPPYLEFT05B     " ?\\_____/?? "
 
-#define D51WHL51 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL52 " |/-=|___|=   O=====O=====O=====O|_____/~\\___/        "
-#define D51WHL53 "  \\_/      \\__/  \\__/  \\__/  \\__/      \\_/            "
+#define TIPPYLEFT01C     "   A___A_   "
+#define TIPPYLEFT02C     "  / . .  \\  "
+#define TIPPYLEFT03C     " | \" ~ \"  | "
+#define TIPPYLEFT04C     "  \\______/  "
+#define TIPPYLEFT05C     " ?????????? "
 
-#define D51WHL61 "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__ "
-#define D51WHL62 " |/-=|___|=    ||    ||    ||    |_____/~\\___/        "
-#define D51WHL63 "  \\_/      \\_O=====O=====O=====O/      \\_/            "
+#define TIPPYFRONT01A    "            "
+#define TIPPYFRONT02A    "   A___A    "
+#define TIPPYFRONT03A    "  / . . \\   "
+#define TIPPYFRONT04A    " | \" ~ \" |  "
+#define TIPPYFRONT05A    " ?\\_____/?  "
 
-#define D51DEL   "                                                      "
+#define TIPPYFRONT01B    "   A___A    "
+#define TIPPYFRONT02B    "  / . . \\   "
+#define TIPPYFRONT03B    " | \" ~ \" |  "
+#define TIPPYFRONT04B    " |       |  "
+#define TIPPYFRONT05B    " ?\\_____/?  "
 
-#define COAL01 "                              "
-#define COAL02 "                              "
-#define COAL03 "    _________________         "
-#define COAL04 "   _|                \\_____A  "
-#define COAL05 " =|                        |  "
-#define COAL06 " -|                        |  "
-#define COAL07 "__|________________________|_ "
-#define COAL08 "|__________________________|_ "
-#define COAL09 "   |_D__D__D_|  |_D__D__D_|   "
-#define COAL10 "    \\_/   \\_/    \\_/   \\_/    "
+#define TIPPYFRONT01C    "   A___A    "
+#define TIPPYFRONT02C    "  / . . \\   "
+#define TIPPYFRONT03C    " | \" ~ \" |  "
+#define TIPPYFRONT04C    "  \\_____/   "
+#define TIPPYFRONT05C    " ?????????? "
 
-#define COALDEL "                              "
+#define TIPPYRIGHT01A    "            "
+#define TIPPYRIGHT02A    "   A___A_   "
+#define TIPPYRIGHT03A    "  /  . . \\  "
+#define TIPPYRIGHT04A    " |  \" ~ \" | "
+#define TIPPYRIGHT05A    " ?\\______/? "
 
-#define LOGOHIGHT    	 6
-#define LOGOFUNNEL  	 4
-#define LOGOLENGTH      84
-#define LOGOPATTERNS	 6
+#define TIPPYRIGHT01B    "   A___A_   "
+#define TIPPYRIGHT02B    "  /  . . \\  "
+#define TIPPYRIGHT03B    "  | \" ~ \"|  "
+#define TIPPYRIGHT04B    "  |      |  "
+#define TIPPYRIGHT05B    " ?\\______/? "
 
-#define LOGO1  "     ++      +------ "
-#define LOGO2  "     ||      |+-+ |  "
-#define LOGO3  "   /---------|| | |  "
-#define LOGO4  "  + ========  +-+ |  "
+#define TIPPYRIGHT01C    "   A___A_   "
+#define TIPPYRIGHT02C    "  /  . . \\  "
+#define TIPPYRIGHT03C    " |  \" ~ \" | "
+#define TIPPYRIGHT04C    "  \\______/  "
+#define TIPPYRIGHT05C    " ?????????? "
 
-#define LWHL11 " _|--O========O~\\-+  "
-#define LWHL12 "//// \\_/      \\_/    "
+#define CHINOPATTERNS 1
+#define CHINOHEIGHT 8
+#define CHINOLENGTH  17
 
-#define LWHL21 " _|--/O========O\\-+  "
-#define LWHL22 "//// \\_/      \\_/    "
+#define CHINOLEFT01      "   __________    "
+#define CHINOLEFT02      "  /          \\   "
+#define CHINOLEFT03      " /\\/     \\/   \\  "
+#define CHINOLEFT04      " |/\\v\\/v\\/\\    | "
+#define CHINOLEFT05      " || O   O  | ) l "
+#define CHINOLEFT06      " |\\ \" _ \"  //  | "
+#define CHINOLEFT07      " |v|o---o_/||  | "
+#define CHINOLEFT08      "  \\l| :   |~l~/  "
 
-#define LWHL31 " _|--/~O========O-+  "
-#define LWHL32 "//// \\_/      \\_/    "
+#define CHINOFRONT01     "    _________    "
+#define CHINOFRONT02     "   /         \\   "
+#define CHINOFRONT03     "  / \\/      \\/\\  "
+#define CHINOFRONT04     "  | /\\Vv\\/vV/\\|  "
+#define CHINOFRONT05     "  | | O   O | |  "
+#define CHINOFRONT06     "  | \\ \" _ \" / |  "
+#define CHINOFRONT07     "  |V||o---o||V|  "
+#define CHINOFRONT08     "   \\~|  :  |~/   "
 
-#define LWHL41 " _|--/~\\------/~\\-+  "
-#define LWHL42 "//// \\_O========O    "
+#define CHINORIGHT01     "    __________   "
+#define CHINORIGHT02     "   /          \\  "
+#define CHINORIGHT03     "  /   \\/     \\/\\ "
+#define CHINORIGHT04     " |    /\\/v\\/v/\\| "
+#define CHINORIGHT05     " l ( |  O   O || "
+#define CHINORIGHT06     " |   \\\\ \" _ \" /| "
+#define CHINORIGHT07     " |  ||\\_o---o|v| "
+#define CHINORIGHT08     "  \\~l~|   : ||/  "
 
-#define LWHL51 " _|--/~\\------/~\\-+  "
-#define LWHL52 "//// \\O========O/    "
+#define COCOAPATTERNS 1
+#define COCOAHEIGHT 8
+#define COCOALENGTH  17
 
-#define LWHL61 " _|--/~\\------/~\\-+  "
-#define LWHL62 "//// O========O_/    "
+#define COCOALEFT01      "   _________     "
+#define COCOALEFT02      "  /         \\    "
+#define COCOALEFT03      " /         =*\\   "
+#define COCOALEFT04      " (/Vv\\ /vV\\   )  "
+#define COCOALEFT05      " || O   O |   |  "
+#define COCOALEFT06      " |\\ \" _ \" / / }  "
+#define COCOALEFT07      "  (|o---o_/|v)   "
+#define COCOALEFT08      "   l|  :  ||    "
 
-#define LCOAL1 "____                 "
-#define LCOAL2 "|   \\@@@@@@@@@@@     "
-#define LCOAL3 "|    \\@@@@@@@@@@@@@_ "
-#define LCOAL4 "|                  | "
-#define LCOAL5 "|__________________| "
-#define LCOAL6 "   (O)       (O)     "
+#define COCOAFRONT01     "    _________    "
+#define COCOAFRONT02     "   /         \\   "
+#define COCOAFRONT03     "  /         =*\\  "
+#define COCOAFRONT04     "  ( /Vv\\ /vV\\ )  "
+#define COCOAFRONT05     "  | | O   O | |  "
+#define COCOAFRONT06     "  |\\\\ \" _ \" //|  "
+#define COCOAFRONT07     "   (v|o---o|v)   "
+#define COCOAFRONT08     "     |  :  |     "
 
-#define LCAR1  "____________________ "
-#define LCAR2  "|  ___ ___ ___ ___ | "
-#define LCAR3  "|  |_| |_| |_| |_| | "
-#define LCAR4  "|__________________| "
-#define LCAR5  "|__________________| "
-#define LCAR6  "   (O)        (O)    "
+#define COCOARIGHT01     "     _________   "
+#define COCOARIGHT02     "    /         \\  "
+#define COCOARIGHT03     "   /          =\\ "
+#define COCOARIGHT04     "  (   /Vv\\ /vV\\) "
+#define COCOARIGHT05     "  |   | O   O || "
+#define COCOARIGHT06     "  { \\ \\ \" _ \" /| "
+#define COCOARIGHT07     "   (v|\\_o---o|)  "
+#define COCOARIGHT08     "     ||   : |l   "
 
-#define DELLN  "                     "
+#define HANDLEPATTERNS  8
+#define HANDLELENGTH  5
+#define HANDLEA          "q=i  "
+#define HANDLEB          " qi  "
+#define HANDLEC          "  i  "
+#define HANDLED          "  iq "
+#define HANDLEE          "  i=q"
+#define HANDLEF          "  q  "
 
-#define C51HIGHT 11
-#define C51FUNNEL 7
-#define C51LENGTH 87
-#define C51PATTERNS 6
+#define GRINDERHEIGHT 2
+#define GRINDERLENGTH 5
+#define GRINDER01        " ( )c"
+#define GRINDER02        "[|_|]"
 
-#define C51DEL "                                                       "
 
-#define C51STR1 "        ___                                            "
-#define C51STR2 "       _|_|_  _     __       __             ___________"
-#define C51STR3 "    D__/   \\_(_)___|  |__H__|  |_____I_Ii_()|_________|"
-#define C51STR4 "     | `---'   |:: `--'  H  `--'         |  |___ ___|  "
-#define C51STR5 "    +|~~~~~~~~++::~~~~~~~H~~+=====+~~~~~~|~~||_| |_||  "
-#define C51STR6 "    ||        | ::       H  +=====+      |  |::  ...|  "
-#define C51STR7 "|    | _______|_::-----------------[][]-----|       |  "
+#define SIPHONHEIGHT 4
+#define SIPHONLENGTH 5
+#define SIPHON01         "(   )"
+#define SIPHON02         "(   )"
+#define SIPHON03         " \\ / "
+#define SIPHON04         "-[ ]-"
 
-#define C51WH61 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH62 "------'|oOo|==[]=-     ||      ||      |  ||=======_|__"
-#define C51WH63 "/~\\____|___|/~\\_|   O=======O=======O  |__|+-/~\\_|     "
-#define C51WH64 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+#define UPPERSIPHONPATTERNS  3
+#define UPPERSIPHONLENGTH  3
+#define UPPERSIPHON01    "   "
+#define UPPERSIPHON02    "___"
+#define UPPERSIPHON03    "==="
 
-#define C51WH51 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH52 "------'|oOo|===[]=-    ||      ||      |  ||=======_|__"
-#define C51WH53 "/~\\____|___|/~\\_|    O=======O=======O |__|+-/~\\_|     "
-#define C51WH54 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+#define LOWERSIPHONPATTERNS  2
+#define LOWERSIPHONLENGTH  3
+#define LOWERSIPHON01    "~-~"
+#define LOWERSIPHON02    "-~-"
 
-#define C51WH41 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH42 "------'|oOo|===[]=- O=======O=======O  |  ||=======_|__"
-#define C51WH43 "/~\\____|___|/~\\_|      ||      ||      |__|+-/~\\_|     "
-#define C51WH44 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+#define FIREPATTERNS  2
+#define FIRELENGTH  3
+#define FIRE01           "VvV"
+#define FIRE02           "vVv"
 
-#define C51WH31 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH32 "------'|oOo|==[]=- O=======O=======O   |  ||=======_|__"
-#define C51WH33 "/~\\____|___|/~\\_|      ||      ||      |__|+-/~\\_|     "
-#define C51WH34 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+#define STIRPATTERNS 4
 
-#define C51WH21 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH22 "------'|oOo|=[]=- O=======O=======O    |  ||=======_|__"
-#define C51WH23 "/~\\____|___|/~\\_|      ||      ||      |__|+-/~\\_|     "
-#define C51WH24 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+#define POURPATTERNS 8
+#define POURLENGTH 6
+#define POUR01           "G(===)"
+#define POUR02           "G(___)"
+#define POUR03           "G(   )"
 
-#define C51WH11 "| /~~ ||   |-----/~~~~\\  /[I_____I][][] --|||_______|__"
-#define C51WH12 "------'|oOo|=[]=-      ||      ||      |  ||=======_|__"
-#define C51WH13 "/~\\____|___|/~\\_|  O=======O=======O   |__|+-/~\\_|     "
-#define C51WH14 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+#define DROPPATTERNS 4
+#define DROP01           ':'
+#define DROP02           '|'
+#define DROP03           '.'
+#define DROP04           ' '
+
+#define TEACUPLENGTH 4
+#define TEACUP           "c[_]"
+#define TEACUPACCIDENT   "=(@)"
+
+#define DELLN "                     "
