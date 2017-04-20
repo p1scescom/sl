@@ -8,9 +8,11 @@
 
 #(2014/03/26 modified Taichi-Sugiyama)
 
+#(2017/04/20 modified p1scescom)
+
 CC=gcc
 CFLAGS=-O
 
 erutaso: sl.c sl.h
-	$(CC) $(CFLAGS) -o erutaso sl.c -lncurses
+	$(CC) $(CFLAGS) -o eromangasensei sl.c -lncurses
 

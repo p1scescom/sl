@@ -8,55 +8,80 @@
  * 
  * Erutasonized by Taichi Sugiyama: 2013/ 3/26
  *
+ * EromangaSenseinized by p1scescom: 2017/ 4/20
+ *
  */
-#define ERUTASOHIGHT     9
-#define ERUTASOFUNNEL  	 4
-#define ERUTASOLENGTH   36
-#define ERUTASOPATTERNS	 6
+#define EROMANGASENSEIHIGHT     11
+#define EROMANGASENSEILENGTH   36
+#define EROMANGASENSEIPATTERNS	 4
 
-#define ERUTASO11  "      _______                       "
-#define ERUTASO12  "    /:::::::::\\    _____            "
-#define ERUTASO13  "( \\/::::::::::::\\/     _)           "
-#define ERUTASO14  " (|::_A__A_:::::|    _)             "
-#define ERUTASO15  "  |:| O   O |:::|  _)               "
-#define ERUTASO16  "  l:( \" _ \" |:|:|_)                 "
-#define ERUTASO17  "   l C --C  l:|:|                   "
-#define ERUTASO18  "    l:/\\     l:/ )                  "
-#define ERUTASO19  "        `~U^^^U~/                   "
-#define ERUTASO1DEL "                                    "
-
-
-#define ERUTASO21  "      _______                       "
-#define ERUTASO22  "    /:::::::::\\    ___              "
-#define ERUTASO23  " (\\/::::::::::::\\/   _)             "
-#define ERUTASO24  "  |::_A__A_:::::|   _)              "
-#define ERUTASO25  "  |:| O   O |:::| _)                "
-#define ERUTASO26  "  l:( \" _ \" |:|:|)                  "
-#define ERUTASO27  "   l C --C  l:|:|                   "
-#define ERUTASO28  "    l:/\\     l:/ )                  "
-#define ERUTASO29  "        `~U^^^U~/                   "
-#define ERUTASO2DEL "                                    "
-
-#define ERUTASO31  "      _______                       "
-#define ERUTASO32  "    /:::::::::\\    __               "
-#define ERUTASO33  "  (/::::::::::::\\/  _)              "
-#define ERUTASO34  "  |::_A__A_:::::| _)                "
-#define ERUTASO35  "  |:| O   O |:::|_)                 "
-#define ERUTASO36  "  l:( \" _ \" |:|:|)                  "
-#define ERUTASO37  "   l C --C  l:|:|                   "
-#define ERUTASO38  "    l:/\\     l:/ )                  "
-#define ERUTASO39  "        `~U^^^U~/                   "
-#define ERUTASO3DEL "                                    "
+#define EROMANGASENSEI11  "     __________                     "
+#define EROMANGASENSEI12  "   ,'           `,                  "
+#define EROMANGASENSEI13  "  /  _    ___.    \\                 "
+#define EROMANGASENSEI14  " |></^\\___\\^  \\|><|)                "
+#define EROMANGASENSEI15  "  | |O     O   |  |                 "
+#define EROMANGASENSEI16  "  |/\"        \" |  |                 "
+#define EROMANGASENSEI17  "  (_____v_____ (  )                 "
+#define EROMANGASENSEI18  "  |><| ;|;    \\|><|                 "
+#define EROMANGASENSEI19  "   </ u |  u|  \\<>                  "
+#define EROMANGASENSEI1A  "    \"===-======\"                    "
+#define EROMANGASENSEI1B  "       U   U                        "
+#define EROMANGASENSEI1DEL "                                    "
 
 
+#define EROMANGASENSEI21  "     __________                     "
+#define EROMANGASENSEI22  "   ,'           `,                  "
+#define EROMANGASENSEI23  "  /  _    ___.    \\                 "
+#define EROMANGASENSEI24  " |></^\\___\\^  \\|><|)                "
+#define EROMANGASENSEI25  "  | |O     O   |  |                 "
+#define EROMANGASENSEI26  "  |/\"        \" |  |                 "
+#define EROMANGASENSEI27  "  (_____v_____ (  )                 "
+#define EROMANGASENSEI28  "  |><| ;|;    \\|><|                 "
+#define EROMANGASENSEI29  "   </ u |  u|  \\<>                  "
+#define EROMANGASENSEI2A  "    \"===-======\"                    "
+#define EROMANGASENSEI2B  "        U U                         "
+#define EROMANGASENSEI2DEL "                                    "
 
-#define ERUTASO41  "      _______                       "
-#define ERUTASO42  "    /:::::::::\\    _                "
-#define ERUTASO43  "  |/::::::::::::\\/ _)               "
-#define ERUTASO44  "  |::_A__A_:::::| _)                "
-#define ERUTASO45  "  |:| O   O |:::|_)                 "
-#define ERUTASO46  "  l:( \" _ \" |:|:|)                  "
-#define ERUTASO47  "   l C --C  l:|:|                   "
-#define ERUTASO48  "    l:/\\     l:/ )                  "
-#define ERUTASO49  "        `~U^^^U~/                   "
-#define ERUTASO4DEL "                                    "
+
+#define EROMANGASENSEI31  "     __________                     "
+#define EROMANGASENSEI32  "   ,'           `,                  "
+#define EROMANGASENSEI33  "  /  _    ___.    \\                 "
+#define EROMANGASENSEI34  " |></^\\___\\^  \\|><|)                "
+#define EROMANGASENSEI35  "  | |O     O   |  |                 "
+#define EROMANGASENSEI36  "  |/\"        \" |  |                 "
+#define EROMANGASENSEI37  "  (_____v_____ (  )                 "
+#define EROMANGASENSEI38  "  |><| ;|;    \\|><|                 "
+#define EROMANGASENSEI39  "   </ u |  u|  \\<>                  "
+#define EROMANGASENSEI3A  "    \"===-======\"                    "
+#define EROMANGASENSEI3B  "         U                          "
+#define EROMANGASENSEI3DEL "                                    "
+
+
+#define EROMANGASENSEIYUKADONPATTERNS 2
+
+#define EROMANGASENSEI41  "     __________                     "
+#define EROMANGASENSEI42  "   ,'           `,                  "
+#define EROMANGASENSEI43  "  /  _    ___.    \\                 "
+#define EROMANGASENSEI44  " |></^\\___\\^  \\|><|)                "
+#define EROMANGASENSEI45  "  | |O     O   |  |                 "
+#define EROMANGASENSEI46  "  |/\"        \" |  |                 "
+#define EROMANGASENSEI47  "  (_____^_____ (  )                 "
+#define EROMANGASENSEI48  "  |><| ;|;    \\|><|                 "
+#define EROMANGASENSEI49  "   </ ^ |  u|  \\<>                  "
+#define EROMANGASENSEI4A  "    \"===-======\"                    "
+#define EROMANGASENSEI4B  "       -   U                        "
+#define EROMANGASENSEI4DEL "                                    "
+
+
+#define EROMANGASENSEI51  "     __________                     "
+#define EROMANGASENSEI52  "   ,'           `,                  "
+#define EROMANGASENSEI53  "  /  _    ___.    \\                 "
+#define EROMANGASENSEI54  " |></^\\___\\^  \\|><|)                "
+#define EROMANGASENSEI55  "  | |O     O   |  |                 "
+#define EROMANGASENSEI56  "  |/\"        \" |  |                 "
+#define EROMANGASENSEI57  "  (_____^_____ (  )                 "
+#define EROMANGASENSEI58  "  |><| ;|;    \\|><|                 "
+#define EROMANGASENSEI59  "   </u  |  u|  \\<>                  "
+#define EROMANGASENSEI5A  "    \"===-======\"                    "
+#define EROMANGASENSEI5B  " DON > U   U                        "
+#define EROMANGASENSEI5DEL "                                    "
